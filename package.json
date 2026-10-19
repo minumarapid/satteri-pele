@@ -1,0 +1,51 @@
+{
+  "name": "satteri-pele",
+  "version": "0.1.0",
+  "description": "Render Mermaid diagrams in Sätteri with Pele",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minumarapid/satteri-pele.git"
+  },
+  "bugs": {
+    "url": "https://github.com/minumarapid/satteri-pele/issues"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "check:type": "tsc --noEmit",
+    "check:biome": "biome check",
+    "check": "pnpm check:type && pnpm check:biome",
+    "fix": "biome check --write"
+  },
+  "keywords": [
+    "satteri",
+    "mermaid",
+    "markdown",
+    "mdx",
+    "plugin"
+  ],
+  "author": "tana <contact@o38.me> (https://o38.me/)",
+  "license": "ISC",
+  "type": "module",
+  "peerDependencies": {
+    "pele": "^1.5.2",
+    "satteri": "^0.10.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.15",
+    "tsdown": "^0.23.1",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.5"
+  }
+}
